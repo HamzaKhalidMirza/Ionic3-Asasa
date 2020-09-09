@@ -1,0 +1,114 @@
+.sterik {
+    color: var(--ion-color-primary);
+}
+
+.section-top {
+  width: 100%;
+  height: 50%;
+  background: url("/assets/imgs/21.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: left;
+  padding: 0;
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+
+    .content {
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 15%;
+      transform: translate(-10%, -50%);
+    }
+  }
+}
+
+.section-form {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+
+  .section-head,
+  .section-footer {
+    color: #777;
+    margin-bottom: 2.5rem;
+  }
+
+  .selection-btn {
+    margin-bottom: 10px;
+
+    .pre-btn {
+      height: 30px;
+      margin: 0;
+      text-transform: capitalize;
+      font-size: 1rem;
+    }
+    .btn-sale.btn-yes {
+      background: color($colors, primary);
+      box-shadow: 0;
+      border-radius: 5px 0 0 5px;
+    }
+    .btn-sale.btn-no {
+      border: 1px solid #aaa;
+      border-right: 0;
+      border-radius: 5px 0 0 5px;
+      color: #888;
+      background: #fff;
+      box-shadow: 0;
+    }
+    .btn-rent.btn-yes {
+      background: color($colors, primary);
+      box-shadow: 0;
+      border-radius: 0 5px 5px 0;
+    }
+    .btn-rent.btn-no {
+      border: 1px solid #aaa;
+      border-left: 0;
+      border-radius: 0 5px 5px 0;
+      color: #888;
+      background: #fff;
+      box-shadow: 0;
+    }
+  }
+
+  .input-group {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 100%;
+
+    ion-label {
+      color: #555;
+    }
+    .input-control {
+      font-size: 14px;
+      color: #333;
+      background: #eaeaea;
+      border: 1px solid #bbb;
+      width: 100%;
+      border-radius: 5px;
+    }
+    .input-error {
+      border: 1px solid #CD5C5C;
+    }
+    .input-control.input {
+      height: 40px;
+    }
+    .input-control.textarea {
+      resize: none;
+      padding: 10px;
+    }
+    ion-select {
+      width: 100%;
+      max-width: 100%;
+      color: #333;
+      background: #eaeaea;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+    }
+  }
+}

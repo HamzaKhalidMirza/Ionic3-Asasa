@@ -1,6 +1,7 @@
+import { AddTestimonialComponent } from './../../components/add-testimonial/add-testimonial';
+import { AddPropertyComponent } from './../../components/add-property/add-property';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 @Component({
   selector: 'page-home',
@@ -8,36 +9,18 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 })
 export class HomePage {
 
-  addTestimonialForm: FormGroup;
-
   constructor(
-    private navCtrl: NavController,
-    private formBuilder: FormBuilder
+    private navCtrl: NavController
   ) { }
 
   ngOnInit() {
-    this.formInitializer();
   }
 
-  formInitializer() {
-    this.addTestimonialForm = this.formBuilder.group({
-      reason: ['', [Validators.required]],
-      message: ['', [Validators.required]]
-    });
-  }
-  get Reason() {
-    return this.addTestimonialForm.get("reason");
-  }
-  get Message() {
-    return this.addTestimonialForm.get("message");
+  routeToAddProperty() {
+    this.navCtrl.push(AddPropertyComponent);
   }
 
-  addTestimonial() {
-    console.log(this.addTestimonialForm);
-    if(this.addTestimonialForm.invalid) {
-      return;
-    }
-    console.log(this.addTestimonialForm.value);
+  routeToAddTestimonial() {
+    this.navCtrl.push(AddTestimonialComponent);
   }
-
 }
