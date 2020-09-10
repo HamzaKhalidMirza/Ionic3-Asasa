@@ -128,6 +128,7 @@
                 >Select Property Type<span class="sterik">*</span></ion-label
               >
               <ion-select
+                interface="popover"
                 class="input"
                 [class.input-error]="PropertyType.invalid && (PropertyType.dirty || PropertyType.touched)"
                 formControlName="propertyType"
@@ -160,6 +161,7 @@
                 >Select Land Area Unit<span class="sterik">*</span></ion-label
               >
               <ion-select
+                interface="popover"
                 class="input"
                 [class.input-error]="LandAreaUnit.invalid && (LandAreaUnit.dirty || LandAreaUnit.touched)"
                 formControlName="landAreaUnit"
