@@ -1,3 +1,4 @@
+import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
@@ -19,7 +20,8 @@ export class AddPropertyComponent {
   addPropertyForm: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private navCtrl: NavController
   ) { }
 
   ngOnInit() {
@@ -98,6 +100,10 @@ export class AddPropertyComponent {
   selectRent() {
     this.selection = 'Rent';
     this.addPropertyForm.patchValue({sale_rent: this.selection});
+  }
+
+  dismiss() {
+    this.navCtrl.pop();
   }
 }
 

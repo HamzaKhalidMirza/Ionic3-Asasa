@@ -46,5 +46,9 @@ export class AddTestimonialComponent {
     console.log(this.addTestimonialForm.value);
   }
 
+  dismiss() {
+    this.navCtrl.pop();
+  }
+
 }
 

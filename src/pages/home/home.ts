@@ -1,3 +1,4 @@
+import { UpdateProfileComponent } from './../../components/update-profile/update-profile';
 import { AddTestimonialComponent } from './../../components/add-testimonial/add-testimonial';
 import { AddPropertyComponent } from './../../components/add-property/add-property';
 import { Component } from '@angular/core';
@@ -22,5 +23,9 @@ export class HomePage {
 
   routeToAddTestimonial() {
     this.navCtrl.push(AddTestimonialComponent);
+  }
+
+  routeToUpdateProfile() {
+    this.navCtrl.push(UpdateProfileComponent);
   }
 }

@@ -1,0 +1,182 @@
+<!-- <ion-content>
+  <div class="toolbar">
+    <div class="content">
+      <h6 (click)="dismiss()">
+        <ion-icon name="close" size-large></ion-icon>
+        Close
+      </h6>
+    </div>
+  </div>
+
+  <section class="top-section">
+    <h3>UPDATE PROFILE</h3>
+    <div class="profile-img">
+      <ion-avatar> </ion-avatar>
+    </div>
+  </section>
+
+  <div class="card">
+    <form [formGroup]="form">
+      <div class="input-group">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <ion-item lines="none" style="background: #fafafa">
+                <ion-label stacked>Name</ion-label>
+                <ion-input
+                  type="text"
+                  class="input-control"
+                  [class.input-error]="Name.invalid && Name.dirty"
+                  formControlName="name"
+                ></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <ion-item lines="none" style="background: #fafafa">
+                <ion-label stacked>Email</ion-label>
+                <ion-input
+                  type="text"
+                  class="input-control"
+                  [class.input-error]="Email.invalid && Email.dirty"
+                  formControlName="email"
+                ></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <ion-item lines="none" style="background: #fafafa">
+                <ion-label stacked>Phone No.</ion-label>
+                <ion-input
+                  type="text"
+                  class="input-control"
+                  [class.input-error]="MobileNo.invalid && MobileNo.dirty"
+                  formControlName="mobileNo"
+                ></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-10 offset-1>
+              <button
+                style="border-radius: 20px"
+                ion-button
+                [disabled]="form.invalid ||
+                          (form.touched && form.pristine) ||
+                          form.untouched"
+                color="secondary"
+                (click)="updateProfile()"
+                type="submit"
+                class="btn-normal btn-submit"
+                full
+              >
+                UPDATE PROFILE!
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </form>
+  </div>
+</ion-content> -->
+
+<ion-content>
+  <div class="toolbar">
+    <div class="content">
+      <h6 (click)="dismiss()">
+        <ion-icon name="close" size-large></ion-icon>
+        Close
+      </h6>
+    </div>
+  </div>
+
+  <div class="section section-t">
+    <div class="overlay">
+      <div class="content">
+        <div class="profile-img">
+          <ion-avatar class="img">
+            <ion-img src="assets/imgs/22.png"></ion-img>
+          </ion-avatar>
+          <ion-icon name="camera" color="dark"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-divider"></div>
+
+  <div class="section">
+    <form [formGroup]="form">
+      <ion-grid style="margin-top: 1rem;">
+        <ion-row>
+          <ion-col col-12>
+            <div class="input-group">
+              <ion-item lines="none">
+                <ion-label stacked>Name*</ion-label>
+                <ion-input
+                  type="text"
+                  class="input-control"
+                  [class.input-error]="Name.invalid && Name.dirty"
+                  formControlName="name"
+                ></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+            <div class="input-group">
+              <ion-item lines="none">
+                <ion-label stacked>Email*</ion-label>
+                <ion-input
+                  type="text"
+                  class="input-control"
+                  [class.input-error]="Email.invalid && Email.dirty"
+                  formControlName="email"
+                ></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+            <div class="input-group">
+              <ion-item lines="none">
+                <ion-label stacked>Phone No*</ion-label>
+                <ion-input
+                  type="text"
+                  class="input-control"
+                  [class.input-error]="MobileNo.invalid && MobileNo.dirty"
+                  formControlName="mobileNo"
+                ></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-10 offset-1>
+            <div class="input-group">
+              <button
+                style="border-radius: 20px; margin-top: 2rem;"
+                ion-button
+                [disabled]="form.invalid ||
+                          (form.touched && form.pristine) ||
+                          form.untouched"
+                color="secondary"
+                (click)="updateProfile()"
+                type="submit"
+                class="btn-normal btn-submit"
+                full
+              >
+                UPDATE PROFILE!
+              </button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+
+</ion-content>

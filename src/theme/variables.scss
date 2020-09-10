@@ -123,5 +123,27 @@ p {
   height: 15px;
   padding: 0;
   margin-top: 2rem;
+  // border-radius: 15px 15px 0 0;
   background: color($colors, primary);
+}
+
+.toolbar {
+  background: color($colors, primary);
+  color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  .content {
+    width: 100%;
+    text-align: right;
+    padding-right: 2rem;
+
+    ion-icon {
+      font-size: 1.5rem;
+      margin-right: 0.2rem;
+    }
+  }
 }
